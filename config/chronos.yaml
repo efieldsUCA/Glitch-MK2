@@ -1,0 +1,31 @@
+# Shared by chronos_recorder and chronos_pilot. The image size and max
+# velocities must match between recording and driving, or the trained
+# model's outputs will be scaled wrong.
+# Button indices: check yours with `ros2 topic echo /joy`.
+camera:
+  ros__parameters:
+    width: 640
+    height: 480
+
+chronos_recorder:
+  ros__parameters:
+    image_width: 180
+    image_height: 200
+    max_linear_vel: 0.35  # scale_linear_turbo in gamepad.yaml
+    max_angular_vel: 0.5  # scale_angular in gamepad.yaml
+    record_button: 0  # A
+    record_rate: 20.0
+    skip_idle: true
+    data_root: ~/glitchmk2_data
+
+chronos_pilot:
+  ros__parameters:
+    image_width: 180
+    image_height: 200
+    max_linear_vel: 0.35
+    max_angular_vel: 0.5
+    throttle_limit: 0.6
+    engage_button: 7  # Start/Menu
+    stop_button: 1  # B
+    enable_button: 4  # LB, teleop deadman
+    num_threads: 4
