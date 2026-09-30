@@ -40,6 +40,8 @@ setup(
             'pico_interface = glitchmk2_bringup.pico_interface:main',
             'basic_pico_interface = glitchmk2_bringup.basic_pico_interface:main',
             'aruco_detector = glitchmk2_bringup.aruco_detector:main',
+            'chronos_recorder = glitchmk2_bringup.chronos_recorder:main',
+            'chronos_pilot = glitchmk2_bringup.chronos_pilot:main',
         ],
     },
 )

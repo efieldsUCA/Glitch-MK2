@@ -10,6 +10,12 @@
   <depend>tf_transformations</depend>
   <depend>rplidar_ros</depend>
   <depend>robot_localization</depend>
+  <depend>camera_ros</depend>
+  <depend>cv_bridge</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <exec_depend>python3-opencv</exec_depend>
+  <!-- chronos_pilot also needs PyTorch (CPU); install with pip, see docs/chronos-ml.md -->
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
